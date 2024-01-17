@@ -23,7 +23,7 @@ user_rol = st.selectbox(
   placeholder="Select your new rol",
   key="new_talent_rol")
   
-if name and rol:
+if user_name and user_rol:
 #ASSISTANT CONFIGURATION
     st.header("Welcome to GenAI Partners Team!")
     st.write(st.session_state.new_talent_name)
