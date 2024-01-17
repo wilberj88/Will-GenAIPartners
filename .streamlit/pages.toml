@@ -6,16 +6,18 @@ icon = "🏠"
 [[pages]]
 path = "pages/simple.py"
 name = "Page 2 - Simpliest try"
-icon = ":books:"
+icon = "2️⃣"
+
+
 
 [[pages]]
 path = "pages/prompt_template.py"
 name = "Page 3 - Second simpliest try"
-icon = ":books:"
+icon = "3️⃣"
 
 
 [[pages]]
 path = "pages/home_exercise.py"
 name = "Page 4 - More complex try"
-icon = ":books:"
+icon = "4️⃣"
 
