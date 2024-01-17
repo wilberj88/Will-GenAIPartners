@@ -3,6 +3,11 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts.chat import ChatPromptTemplate
 import os
 
+st.set_page_config(
+    page_title="Wilber - GenAI Partners - Test",
+    page_icon="🤖",
+    layout="wide")
+
 
 api_key1 = st.secrets["OPENAI_API_KEY"]
 
