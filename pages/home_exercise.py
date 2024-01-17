@@ -15,17 +15,20 @@ api_key1 = st.secrets["OPENAI_API_KEY"]
 chat_model = ChatOpenAI(openai_api_key=api_key1)
 
 #USER INTERACTION
-name = st.text_input("Please write your name:")
+name = st.text_input("Please write your name:", key="new_talent_name")
 rol = st.selectbox(
   "Please select your rol", 
   ("Machine Learning Engineer", "Artificial Intelligence Engineer", "Deep Learning Engineer"),
   index=None,
-  placeholder="Select your new rol")
+  placeholder="Select your new rol",
+  key="new_talent_rol")
 start = st.button("Start Onboarding Guide Process")
   
 if start:
 #ASSISTANT CONFIGURATION
     st.header("Welcome to GenAI Partners Team!")
+    st.write(st.session_state.new_talent_name)
+    st.write(st.session_state.new_talent_rol)
     template = """"
     You area helpful assistant for onboarding new talent in a company of generative artificial intelligence.
     The name of the company you work for is GenAI Partners.
@@ -38,7 +41,7 @@ if start:
     Then you tell the new talent that the day for star working is thursday january 18 of 2024.
     Finally ask by the name of the new talent if he o she has questions about the process and if they have all the tests done to start the job. 
     """
-    human_template = "{new_talent_name}, {new_talent_rol}"
+    human_template = "{st.session_state.new_talent_name}, {st.session_state.new_talent_rol}"
   
     chat_prompt = ChatPromptTemplate.from_messages([
       ("system", template),
