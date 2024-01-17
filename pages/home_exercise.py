@@ -47,9 +47,7 @@ if name and rol:
       ("human", human_template),
     ])
   
-    messages = chat_prompt.format_messages(name=name,
-                                           rol=rol,
-                                           )
+    messages = chat_prompt.format_messages(name, rol)
     
     result = chat_model.predict_messages(messages)
 
