@@ -48,8 +48,8 @@ if start:
       ("human", human_template),
     ])
   
-    messages = chat_prompt.format_messages(new_talent_name={name},
-                                           new_talent_rol = {rol},
+    messages = chat_prompt.format_messages(new_talent_name={st.session_state.new_talent_name},
+                                           new_talent_rol = {st.session_state.new_talent_rol},
                                            )
     
     result = chat_model.predict_messages(messages)
