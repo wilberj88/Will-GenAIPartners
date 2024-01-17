@@ -22,9 +22,8 @@ rol = st.selectbox(
   index=None,
   placeholder="Select your new rol",
   key="new_talent_rol")
-start = st.button("Start Onboarding Guide Process")
   
-if start:
+if name and rol:
 #ASSISTANT CONFIGURATION
     st.header("Welcome to GenAI Partners Team!")
     st.write(st.session_state.new_talent_name)
@@ -48,8 +47,8 @@ if start:
       ("human", human_template),
     ])
   
-    messages = chat_prompt.format_messages(name=st.session_state.new_talent_name,
-                                           rol=st.session_state.new_talent_rol,
+    messages = chat_prompt.format_messages(name=name,
+                                           rol=rol,
                                            )
     
     result = chat_model.predict_messages(messages)
