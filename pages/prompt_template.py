@@ -4,7 +4,6 @@ from langchain.prompts.chat import ChatPromptTemplate
 import os
 from st_pages import show_pages_from_config, add_page_title
 
-add_page_title()
 
 show_pages_from_config()
 
