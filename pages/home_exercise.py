@@ -16,8 +16,8 @@ chat_model = ChatOpenAI(openai_api_key=api_key1)
 
 #USER INTERACTION
 if st.button("Start Onboarding Process"):
-  name = st.input_text("Please write your name:")
-  rol = st.select_box("Please select your rol", ["Machine Learning Engineer", "Artificial Intelligence Engineer", "Deep Learning Engineer"])
+  name = st.text_input("Please write your name:")
+  rol = st.selectbox("Please select your rol", ("Machine Learning Engineer", "Artificial Intelligence Engineer", "Deep Learning Engineer"))
 
   if name and rol:
 #ASSISTANT CONFIGURATION
