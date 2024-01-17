@@ -22,7 +22,11 @@ st.title('Personalized Guide by Generative Virtual Assistant')
 
 #INPUTS
 #input_name = st.text_input("Please write your name:")
-input_rol = st.selectbox('Plase select your rol for a personalized onboarding guide', rol, placeholder="Choose an option")
+input_rol = st.selectbox(
+  'Plase select your rol for a personalized onboarding guide', 
+  rol, 
+  index=None,
+  placeholder="Choose an option")
 
 
 #PROMPT
