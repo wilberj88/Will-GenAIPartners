@@ -15,11 +15,15 @@ api_key1 = st.secrets["OPENAI_API_KEY"]
 chat_model = ChatOpenAI(openai_api_key=api_key1)
 
 #USER INTERACTION
-if st.button("Start Onboarding Process"):
-  name = st.text_input("Please write your name:")
-  rol = st.selectbox("Please select your rol", ("Machine Learning Engineer", "Artificial Intelligence Engineer", "Deep Learning Engineer"))
-
-  if name and rol:
+name = st.text_input("Please write your name:")
+rol = st.selectbox(
+  "Please select your rol", 
+  ("Machine Learning Engineer", "Artificial Intelligence Engineer", "Deep Learning Engineer"),
+  index=None,
+  placeholder="Select your new rol")
+start = st.button("Start Onboarding Guide Process"):
+  
+if start:
 #ASSISTANT CONFIGURATION
     st.header("Welcome to GenAI Partners Team!")
     template = """"
@@ -46,5 +50,6 @@ if st.button("Start Onboarding Process"):
                                            )
     
     result = chat_model.predict_messages(messages)
-    
+
+#ASSISTANT GENERATIVE RESPONSE
     st.write(result.content)
