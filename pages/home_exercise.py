@@ -8,27 +8,16 @@ import os
 st.title('Will`s home exercise')
 st.header('For GenAI Partners')
 st.write('Virtual Assistant For Onboarding in GenAI Partnerts')
+import streamlit as st
+from langchain.chat_models import ChatOpenAI
+from langchain.prompts.chat import ChatPromptTemplate
+import os
 
-#API CONECTIONS
 api_key1 = st.secrets["OPENAI_API_KEY"]
-#api_key2 = os.getenv("OPENAI_API_KEY")
+
 chat_model = ChatOpenAI(openai_api_key=api_key1)
 
-#USER INTERACTION
-user_name = st.text_input("Please write your name:", key="new_talent_name")
-user_rol = st.selectbox(
-  "Please select your rol", 
-  ("Machine Learning Engineer", "Artificial Intelligence Engineer", "Deep Learning Engineer"),
-  index=None,
-  placeholder="Select your new rol",
-  key="new_talent_rol")
-  
-if user_name and user_rol:
-#ASSISTANT CONFIGURATION
-    st.header("Welcome to GenAI Partners Team!")
-    st.write(st.session_state.new_talent_name)
-    st.write(st.session_state.new_talent_rol)
-    template = """"
+template = """"
     You area helpful assistant for onboarding new talent in a company of generative artificial intelligence.
     The name of the company you work for is GenAI Partners.
     Your name as virtual assistant is Wilber and you are the host for the new ones.
@@ -37,19 +26,37 @@ if user_name and user_rol:
     When you give orientation you explain the kind of mission and vision for a generative artificial intelligence company.
     When you give precedents you explain that the rol does
     When you give training you select the top 5 books about the rol
+    You have to write the orientation, precedents and training in steps.
     Then you tell the new talent that the day for star working is thursday january 18 of 2024.
     Finally ask by the name of the new talent if he o she has questions about the process and if they have all the tests done to start the job. 
     """
-    human_template = "{user_info}"
-  
-    chat_prompt = ChatPromptTemplate.from_messages([
-      ("system", template),
-      ("human", human_template),
-    ])
-  
-    messages = chat_prompt.format_messages(user_info=user_rol)
-    
-    result = chat_model.predict_messages(messages)
 
-#ASSISTANT GENERATIVE RESPONSE
-    st.write(result.content)
+human_template = "{text}"
+
+chat_prompt = ChatPromptTemplate.from_messages([
+  ("system", template),
+  ("human", human_template),
+])
+
+input_user_name = st.text_input("Please write your name:")
+rol = ['Machine learning Engineer', 'Artificial Intelligence Engineer', 'Data Scientist']
+input_user_rol = st.selectbox(
+  'Please select your rol for a personalized onboarding guide', 
+  rol, 
+  index=None,
+  placeholder="Choose an option")
+
+messages = chat_prompt.format_messages(user_name="{inut_user_name}",
+                                       user_rol="{input_user_rol}",
+                                       text="Please give me my personalized onboarding guide to the company")
+
+result = chat_model.predict_messages(messages)
+
+st.write(result.content)
+
+
+
+prompt = st.chat_input("Say something")
+
+if prompt:
+    st.write(f"User has sent the following prompt: {prompt}")
