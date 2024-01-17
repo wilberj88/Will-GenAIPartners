@@ -33,5 +33,6 @@ messages = chat_prompt.format_messages(user_name="Wilber Jimenez Hernandez",
                                        text="Please give me my personalized onboarding guide to the company")
 
 result = chat_model.predict_messages(messages)
-
+st.divider()
+st.write('Virtual Assistant 🤖 says:')
 st.write(result.content)
