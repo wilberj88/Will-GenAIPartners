@@ -2,11 +2,18 @@
 import streamlit as st
 from langchain.chat_models import ChatOpenAI
 import os
-from st_pages import show_pages_from_config, add_page_title
 
-
-
-show_pages_from_config()
+st.set_page_config(
+    page_title="Test in GenAI Partners for Wilber",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
 
 
 #API CONNECTION
