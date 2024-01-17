@@ -10,17 +10,7 @@ with st.sidebar:
         icons=['house', 'gear', 'house'], menu_icon="cast", default_index=1)
     selected
 
-st.set_page_config(
-    page_title="Test in GenAI Partners for Wilber",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
+
 
 
 #API CONNECTION
