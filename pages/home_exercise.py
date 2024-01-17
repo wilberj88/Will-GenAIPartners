@@ -15,8 +15,8 @@ api_key1 = st.secrets["OPENAI_API_KEY"]
 chat_model = ChatOpenAI(openai_api_key=api_key1)
 
 #USER INTERACTION
-name = st.text_input("Please write your name:", key="new_talent_name")
-rol = st.selectbox(
+user_name = st.text_input("Please write your name:", key="new_talent_name")
+user_rol = st.selectbox(
   "Please select your rol", 
   ("Machine Learning Engineer", "Artificial Intelligence Engineer", "Deep Learning Engineer"),
   index=None,
@@ -47,7 +47,7 @@ if name and rol:
       ("human", human_template),
     ])
   
-    messages = chat_prompt.format_messages(name, rol)
+    messages = chat_prompt.format_messages(name=user_name, rol=user_rol)
     
     result = chat_model.predict_messages(messages)
 
