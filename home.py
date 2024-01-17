@@ -4,13 +4,6 @@ from langchain.chat_models import ChatOpenAI
 import os
 from streamlit_option_menu import option_menu
 
-# 1. as sidebar menu
-with st.sidebar:
-    selected = option_menu("Main Menu", ["Home", 'Simpliest try 1', 'Second simpliest try 2', 'Third try of the day'], 
-        icons=['house', 'gear', 'house'], menu_icon="cast", default_index=1)
-    selected
-
-
 
 
 #API CONNECTION
