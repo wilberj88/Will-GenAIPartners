@@ -47,7 +47,7 @@ input_user_rol = st.selectbox(
   index=None,
   placeholder="Choose an option")
 
-messages = chat_prompt.format_messages(input_variables=['input_user_name', 'input_user_rol']",
+messages = chat_prompt.format_messages(input_variables=[input_user_name, input_user_rol]",
                                        text="Please give me my personalized onboarding guide to the company")
 
 result = chat_model.predict_messages(messages)
