@@ -2,21 +2,12 @@
 import streamlit as st
 from langchain.chat_models import ChatOpenAI
 import os
-from st_pages import Page, show_pages, add_page_title
+from st_pages import show_pages_from_config, add_page_title
 
-# Optional -- adds the title and icon to the current page
+
 add_page_title()
 
-# Specify what pages should be shown in the sidebar, and what their titles and icons
-# should be
-show_pages(
-    [
-        Page("home.py", "Home", "🏠"),
-        Page("pages/simple.py", "Page 2", ":books:"),
-        Page("pages/prompt_template.py", "Page 3", ":books:"),
-        Page("pages/home_exercise.py", "Page 4", ":books:"),
-    ]
-)
+show_pages_from_config()
 
 
 #API CONNECTION
