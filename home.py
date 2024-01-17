@@ -4,6 +4,18 @@ from langchain.chat_models import ChatOpenAI
 import os
 from streamlit_option_menu import option_menu
 
+st.set_page_config(
+    page_title="Wilber - GenAI Partners - Test",
+    page_icon="🤖",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
+
 
 
 #API CONNECTION
