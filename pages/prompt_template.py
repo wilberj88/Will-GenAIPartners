@@ -7,7 +7,7 @@ api_key1 = st.secrets["OPENAI_API_KEY"]
 
 chat_model = ChatOpenAI(openai_api_key=api_key1)
 
-st.title('Personalized Guide 🤖')
+st.title('Personalized Guide 👇')
 
 template = """"
     You area helpful assistant for onboarding new talent in a company of generative artificial intelligence.
