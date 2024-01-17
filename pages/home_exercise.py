@@ -40,14 +40,14 @@ if user_name and user_rol:
     Then you tell the new talent that the day for star working is thursday january 18 of 2024.
     Finally ask by the name of the new talent if he o she has questions about the process and if they have all the tests done to start the job. 
     """
-    human_template = "{st.session_state.new_talent_name}, {st.session_state.new_talent_rol}"
+    human_template = "{user_info}"
   
     chat_prompt = ChatPromptTemplate.from_messages([
       ("system", template),
       ("human", human_template),
     ])
   
-    messages = chat_prompt.format_messages(name=user_name, rol=user_rol)
+    messages = chat_prompt.format_messages(user_info=rol)
     
     result = chat_model.predict_messages(messages)
 
