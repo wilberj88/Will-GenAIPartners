@@ -22,6 +22,6 @@ st.set_page_config(
 st.title("Exercise for GenAI Partners")
 st.header("By Wilber Jiménez Hernández at january 17/2024")
 st.divider()
-st.subheader('3 differents implementation of Personalized Guide by Generative Virtual Assistant')
+st.subheader('3 different implementations of Personalized Guide by Generative Virtual Assistant')
 st.write('Look the 3 tries in the pages of the left 👈')
 st.write('The simpliest one is <simple>, the next takes multiple parameters <prompt template> and the most complex is in <home exercise>')
