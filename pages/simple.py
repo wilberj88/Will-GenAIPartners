@@ -2,11 +2,12 @@
 import streamlit as st
 from langchain.chat_models import ChatOpenAI
 import os
-from st_pages import show_pages_from_config, add_page_title
 
 
-show_pages_from_config()
-
+st.set_page_config(
+    page_title="Wilber - GenAI Partners - Test",
+    page_icon="🤖",
+    layout="wide")
 
 #API CONNECTION
 api_key1 = st.secrets["OPENAI_API_KEY"]
