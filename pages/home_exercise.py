@@ -21,7 +21,7 @@ rol = st.selectbox(
   ("Machine Learning Engineer", "Artificial Intelligence Engineer", "Deep Learning Engineer"),
   index=None,
   placeholder="Select your new rol")
-start = st.button("Start Onboarding Guide Process"):
+start = st.button("Start Onboarding Guide Process")
   
 if start:
 #ASSISTANT CONFIGURATION
