@@ -27,13 +27,13 @@ input_rol = st.selectbox('Plase select your rol', rol, key = 'rol_de_entrada')
 
 
 #PROMPT
-with st.expander("See the prompt"):
+prompt = "Hi my name is {input_name} and I am new employee as in GenAI Partnerts Consultants, please guide me in the process to understand how a generative artificial intelligence company works and what a {input_rol} does, also give me tips for orientation, precedents and training for my new rol"
+with st.expander("See the prompt for this use case"):
   st.write(prompt)
 st.divider()
 
 
 #SHOW BOTs MESSAGES
-prompt = "Hi my name is {input_name} and I am new employee as in GenAI Partnerts Consultants, please guide me in the process to understand how a generative artificial intelligence company works and what a {input_rol} does, also give me tips for orientation, precedents and training for my new rol"
 st.write('Virtual Assistant 🤖 says:')
 result = chat_model.predict(prompt)
 st.write(result)
