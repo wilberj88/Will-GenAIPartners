@@ -33,5 +33,5 @@ st.divider()
 st.write('Virtual Assistant 🤖 says:')
 
 #SHOW BOTs MESSAGES
-result = chat_model.predict("Hi my name is {input_name} and I am new employee as in GenAI Partnerts Consultants, please guide me in the process to understand how a generative artificial intelligence company works and what a {input} does, also give me tips for orientation, precedents and training for my new rol")
+result = chat_model.predict("Hi my name is {input_name} and I am new employee as in GenAI Partnerts Consultants, please guide me in the process to understand how a generative artificial intelligence company works and what a {input_rol} does, also give me tips for orientation, precedents and training for my new rol")
 st.write(result)
