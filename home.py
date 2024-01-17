@@ -22,12 +22,12 @@ st.title('Personalized Guide by Generative Virtual Assistant')
 st.header('Please select your rol an receive a personalized onboarding guide')
 
 #INPUTS
-input_name = st.text_input("Please write your name:")
+#input_name = st.text_input("Please write your name:")
 input_rol = st.selectbox('Plase select your rol', rol, key = 'rol_de_entrada')
 
 
 #PROMPT
-prompt = "Hi my name is {input_name} and I am new employee as in GenAI Partnerts Consultants, please guide me in the process to understand how a generative artificial intelligence company works and what a {input_rol} does, also give me tips for orientation, precedents and training for my new rol"
+prompt = "Hi I am new employee as in GenAI Partnerts Consultants, please guide me in the process to understand how a generative artificial intelligence company works and what a {input_rol} does, also give me tips for orientation, precedents and training for my new rol"
 with st.expander("See the prompt for this use case"):
   st.write(prompt)
 st.divider()
