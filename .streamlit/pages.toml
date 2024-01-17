@@ -7,3 +7,15 @@ icon = "🏠"
 path = "pages/simple.py"
 name = "Page 2"
 icon = ":books:"
+
+[[pages]]
+path = "pages/prompt_template.py"
+name = "Page 3"
+icon = ":books:"
+
+
+[[pages]]
+path = "pages/home_exercise.py"
+name = "Page 4"
+icon = ":books:"
+
