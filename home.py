@@ -16,7 +16,7 @@ rol = ['Machine learning Engineer', 'Artificial Intelligence Engineer', 'Data Sc
 
 #TITLE 
 st.title("Exercise for GenAI Partners")
-st.header("By Wilber Jiménez Hernández")
+st.header("By Wilber Jiménez Hernández at january 17/2024")
 st.divider()
 st.title('Personalized Guide by Generative Virtual Assistant')
 st.header('Please select your rol an receive a personalized onboarding guide')
