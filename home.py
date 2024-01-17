@@ -19,11 +19,10 @@ st.title("Exercise for GenAI Partners")
 st.header("By Wilber Jiménez Hernández at january 17/2024")
 st.divider()
 st.title('Personalized Guide by Generative Virtual Assistant')
-st.header('Please select your rol an receive a personalized onboarding guide')
 
 #INPUTS
 #input_name = st.text_input("Please write your name:")
-input_rol = st.selectbox('Plase select your rol', rol, placeholder="Choose an option")
+input_rol = st.selectbox('Plase select your rol for a personalized onboarding guide', rol, placeholder="Choose an option")
 
 
 #PROMPT
@@ -36,4 +35,5 @@ st.divider()
 #SHOW BOTs MESSAGES
 st.write('Virtual Assistant 🤖 says:')
 result = chat_model.predict(prompt)
-st.write(result)
+if input_rol:
+  st.write(result)
