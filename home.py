@@ -30,10 +30,7 @@ chat_model = ChatOpenAI(openai_api_key=api_key1)
 rol = ['Machine learning Engineer', 'Artificial Intelligence Engineer', 'Data Scientist']
 
 
-#PAGE AND TITLE CONFIG
-st.set_page_config(
-    layout = 'wide',
-    page_title = 'Wilber Test for GenAI Partners')
+
 
 st.title("Exercise for GenAI Partners")
 st.header("By Wilber Jiménez Hernández at january 17/2024")
