@@ -1,2 +1,2 @@
 # Will-GenAIPartners
-Assistant Generative AI Agent for Onboardings
+Assistant Generative AI Agent for Onboardings Cases
