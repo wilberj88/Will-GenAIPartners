@@ -11,8 +11,10 @@ add_page_title()
 # should be
 show_pages(
     [
-        Page("streamlit_app.py", "Home", "🏠"),
-        Page("other_pages/page2.py", "Page 2", ":books:"),
+        Page("home.py", "Home", "🏠"),
+        Page("pages/simple.py", "Page 2", ":books:"),
+        Page("pages/prompt_template.py", "Page 3", ":books:"),
+        Page("pages/home_exercise.py", "Page 4", ":books:"),
     ]
 )
 
