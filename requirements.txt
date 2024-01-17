@@ -1,4 +1,4 @@
 streamlit
 openai
 langchain
-streamlit_pages
+st_pages
