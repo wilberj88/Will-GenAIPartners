@@ -16,6 +16,7 @@ template = """"
     When you give orientation you explain the kind of mission and vision for a generative artificial intelligence company.
     When you give precedents you explain that the rol does
     When you give training you select the top 5 books about the rol
+    You have to write the orientation, precedents and training in steps.
     Then you tell the new talent that the day for star working is thursday january 18 of 2024.
     Finally ask by the name of the new talent if he o she has questions about the process and if they have all the tests done to start the job. 
     """
@@ -29,7 +30,7 @@ chat_prompt = ChatPromptTemplate.from_messages([
 
 messages = chat_prompt.format_messages(user_name="Wilber Jimenez Hernandez",
                                        user_rol="Machine Learning Engineer",
-                                       text="Please give me tips for my onboarding to the company")
+                                       text="Please give me my personalized onboarding guide to the company")
 
 result = chat_model.predict_messages(messages)
 
